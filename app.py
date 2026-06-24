@@ -128,32 +128,32 @@ else:
     st.sidebar.markdown("---")
     
     # LLM Key Config & Status Badge
-    st.sidebar.markdown("### ⚙️ LLM Integration")
-    user_api_key = st.sidebar.text_input("Gemini API Key", type="password", 
-                                          value=st.session_state.get("gemini_key", ""),
-                                          placeholder="Enter API Key to enable AI",
-                                          help="Input your Gemini API key to query live models. If empty, the app uses built-in templates.")
+   # st.sidebar.markdown("### ⚙️ LLM Integration")
+#    user_api_key = st.sidebar.text_input("Gemini API Key", type="password", 
+#                                          value=st.session_state.get("gemini_key", ""),
+#                                          placeholder="Enter API Key to enable AI",
+#                                          help="Input your Gemini API key to query live models. If empty, the app uses built-in templates.")
     
-    if user_api_key != st.session_state.get("gemini_key", ""):
-        st.session_state.gemini_key = user_api_key
-        st.toast("🔑 Gemini API Key updated for this session!")
-        st.rerun()
+#   if user_api_key != st.session_state.get("gemini_key", ""):
+#        st.session_state.gemini_key = user_api_key
+#        st.toast("🔑 Gemini API Key updated for this session!")
+#        st.rerun()
 
     # Visual badge showing LLM Active vs Template Mode
-    if st.session_state.get("gemini_key", "").strip():
-        st.sidebar.markdown("""
-            <div style='background: rgba(107, 203, 119, 0.15); border: 1px solid #6BCB77; padding: 10px; border-radius: 8px; margin-bottom: 15px;'>
-                <span style='color: #6BCB77; font-weight: bold;'>🟢 Gemini AI Active</span><br>
-                <span style='font-size: 0.8rem; color: #CCC;'>Generating custom, unique quizzes & study recommendations dynamically for any search topic!</span>
-            </div>
-        """, unsafe_allow_html=True)
-    else:
-        st.sidebar.markdown("""
-            <div style='background: rgba(255, 217, 61, 0.1); border: 1px solid #FFD93D; padding: 10px; border-radius: 8px; margin-bottom: 15px;'>
-                <span style='color: #FFD93D; font-weight: bold;'>⚠️ Local Template Mode</span><br>
-                <span style='font-size: 0.8rem; color: #CCC;'>Provide a key to generate unique quizzes for custom searches. Otherwise, pre-built templates are used.</span>
-            </div>
-        """, unsafe_allow_html=True)
+#    if st.session_state.get("gemini_key", "").strip():
+#        st.sidebar.markdown("""
+#            <div style='background: rgba(107, 203, 119, 0.15); border: 1px solid #6BCB77; padding: 10px; border-radius: 8px; margin-bottom: 15px;'>
+#                <span style='color: #6BCB77; font-weight: bold;'>🟢 Gemini AI Active</span><br>
+#                <span style='font-size: 0.8rem; color: #CCC;'>Generating custom, unique quizzes & study recommendations dynamically for any search topic!</span>
+#            </div>
+#        """, unsafe_allow_html=True)
+#    else:
+#       st.sidebar.markdown("""
+#            <div style='background: rgba(255, 217, 61, 0.1); border: 1px solid #FFD93D; padding: 10px; border-radius: 8px; margin-bottom: 15px;'>
+#                <span style='color: #FFD93D; font-weight: bold;'>⚠️ Local Template Mode</span><br>
+#                <span style='font-size: 0.8rem; color: #CCC;'>Provide a key to generate unique quizzes for custom searches. Otherwise, pre-built templates are used.</span>
+#            </div>
+#        """, unsafe_allow_html=True)
 
     # 3. SIDEBAR STUDY GROUP REMINDERS PANEL
     st.sidebar.markdown("---")
