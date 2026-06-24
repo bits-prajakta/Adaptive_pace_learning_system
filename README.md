@@ -1,4 +1,4 @@
-# Adaptive Pace Learning System
+Adaptive Pace Learning System
 
 Adaptive Pace Learning System is a personalized learning platform built using Python, Machine Learning, and Streamlit. It provides customized learning experiences by adapting content and recommendations according to each user's learning speed, accuracy, and progress.
 
